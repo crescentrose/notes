@@ -1,4 +1,4 @@
-# kitty terminal
+# kitty
 
 [kitty](https://github.com/kovidgoyal/kitty) is a _"cross-platform, fast, feature full, GPU based terminal emulator_".
 
