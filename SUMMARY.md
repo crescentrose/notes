@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Index](README.md)
+* [kitty terminal](kitty-terminal.md)
 
