@@ -25,9 +25,10 @@ Once in `psql`, you can use special commands starting with a backslash as well a
 | Command | What it does |
 | :--- | :--- |
 | \l | list databases |
-| \c db | connect to the `db` database |
+| \c db user | connect to the `db` database as `user` \(user is optional\) |
 | \d | list relations \(tables, sequences, views, indices\) |
-| \d table | describe the table listed \(show columns, types, indices\) |
+| \d table | describe `table` \(show columns, types, indices\) |
 | \dt | list tables in the current database |
 | \e | use your $EDITOR to write a long query |
+| \timing | toggle display of query execution times |
 
