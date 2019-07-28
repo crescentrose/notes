@@ -57,9 +57,45 @@ sudo ip link set dev wlan0 down
 
 You should now have a minimal, yet functional installation that you can then customize to your heart's content.
 
+## Dynamic DNS
+
+If you are like me you are probably running the Pi on a residential connection that gets a different IP every day. However, that doesn't mean you're stuck with an insecure, HTTP-only, IP+port-only access to your Raspberry. If you have a domain name, you can use [ddclient](http://ddclient.sourceforge.net) as a dynamic DNS client, automatically changing the IP to which your domain name points as it changes.
+
+You probably shouldn't be hosting high traffic websites on your residential connection - there will be some downtime in DNS resolving, and your ISP probably won't be happy 🙃. You might also have to ask your ISP to remove you from NAT so that you don't share your IP with 10 other people.
+
+My domain reseller of choice is Namecheap, so the rest of this tutorial will be based on them.
+
+```bash
+# install ddclient
+# ignore the questions asked by the installer
+sudo apt install ddclient
+# edit the ddclient config file
+sudo vim /etc/ddclient.conf
+# edit the defaults file to run ddclient as daemon so that 
+# you can run it as a service
+# change `run_ipup` to false and `run_daemon` to true
+sudo vim /etc/default/ddclient
+# restart ddclient to pick up on the new config
+# don't forget to enable it too
+sudo systemctl start ddclient
+sudo systemctl enable ddclient
+```
+
+Example Namecheap config, if you want to use a wildcard DNS entry so that all subdomains are redirected to the same IP:
+
+```text
+use=web, web=dynamicdns.park-your-domain.com/getip
+protocol=namecheap 
+server=dynamicdns.park-your-domain.com 
+login=<your domain>
+password=<password here>
+*
+
+```
+
 ## Docker
 
-Docker works as expected on the Raspbian, and you can install it with the familiar incantation:
+Docker works as expected on the \) , and you can install it with the familiar incantation:
 
 ```bash
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
@@ -96,6 +132,10 @@ services:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+## strongSwan \(VPN\)
+
+strongSwan is an IKEv2 VPN server, which is cool because IKEv2 is built in to most major mobile and desktop OSs, meaning you don't have to install any additional software. 
 
 
 
