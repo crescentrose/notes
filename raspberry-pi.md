@@ -65,7 +65,7 @@ Docker works as expected on the Raspbian, and you can install it with the famili
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
-The only caveat is that docker-compose offers no pre-built binaries for the ARM architecture. To alleviate that, you will need to install it via `pip` like a peasant:
+The only caveat is that docker-compose offers no pre-built binaries for the ARM architecUture. To alleviate that, you will need to install it via `pip` like a peasant:
 
 ```bash
 sudo apt update
@@ -81,7 +81,21 @@ The [With Blue Ink blog](https://withblue.ink/2019/07/13/yes-you-can-run-docker-
 
 Installation is simple by using Docker, a `docker-compose.yml` example is provided with the image \(and it should be an international war crime not to provide a docker-compose.yml alongside your image\): [https://github.com/pi-hole/docker-pi-hole](https://github.com/pi-hole/docker-pi-hole).
 
-You'll probably want to put something like nginx in front of the web server so you can control who can access to the web interface \(as by default some things are public.\)
+You'll probably want to put something like nginx in front of the web server so you can control who can access to the web interface \(as by default some things are public.\) If you change the default web interface port, you will also need to set an env variable that points to the new URL as by default the app expects to be running on port 80:
+
+{% code-tabs %}
+{% code-tabs-item title="docker-compose.yml" %}
+```yaml
+services:
+    pihole:
+        # ...
+        ports:
+            - '8001:80/tcp'
+        environment:
+            VIRTUAL_HOST: 'your.pihole.host:8001'
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 
