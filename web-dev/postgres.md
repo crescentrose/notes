@@ -32,3 +32,29 @@ Once in `psql`, you can use special commands starting with a backslash as well a
 | \e | use your $EDITOR to write a long query |
 | \timing | toggle display of query execution times |
 
+## Copy to/from CSV
+
+If you ever need to share some data, you can easily export a request to CSV straight into a file:
+
+```text
+\copy (select * from ...) to '/tmp/export.csv' with csv
+```
+
+Or maybe directly to STDOUT?
+
+```text
+\copy (select * from ...) to stdout with csv
+```
+
+Or maybe you want to copy **from** a CSV file into a table?
+
+```text
+\copy table from '~/input.csv' with delimiter ',' csv header
+```
+
+
+
+
+
+
+
