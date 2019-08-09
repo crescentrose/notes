@@ -9,6 +9,7 @@
 * [kitty](terminal-extravaganza/kitty-terminal.md)
 * [vim](terminal-extravaganza/vim.md)
 * [git](terminal-extravaganza/git.md)
+* [ssh](terminal-extravaganza/ssh.md)
 
 ## Web Dev
 
