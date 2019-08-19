@@ -95,7 +95,7 @@ password=<password here>
 
 ## Docker
 
-Docker works as expected on the \) , and you can install it with the familiar incantation:
+Docker works as expected on the Pi , and you can install it with the familiar incantation:
 
 ```bash
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
@@ -136,6 +136,8 @@ services:
 ## strongSwan \(VPN\)
 
 strongSwan is an IKEv2 VPN server, which is cool because IKEv2 is built in to most major mobile and desktop OSs, meaning you don't have to install any additional software. 
+
+TODO: Write how to set this up \(and actually set it up, once I yell at my ISP\)
 
 
 

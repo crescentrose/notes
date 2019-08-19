@@ -2,7 +2,6 @@
 
 * [Index](README.md)
 * [Raspberry Pi](raspberry-pi.md)
-* [systemd](systemd.md)
 
 ## Terminal Extravaganza
 
@@ -16,6 +15,17 @@
 * [Ruby on Rails](web-dev/rails/README.md)
   * [JSON:API](web-dev/rails/json-api.md)
   * [Database](web-dev/rails/database.md)
+  * [Active Storage](web-dev/rails/active-storage.md)
   * [Testing](web-dev/rails/testing.md)
 * [Postgres](web-dev/postgres.md)
+
+## System Administration
+
+* [systemd](system-administration/systemd.md)
+* [launchd](system-administration/launchd.md)
+
+## Operations
+
+* [Packer](operations/packer.md)
+* [Docker](operations/docker.md)
 
