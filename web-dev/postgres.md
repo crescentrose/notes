@@ -32,6 +32,19 @@ Once in `psql`, you can use special commands starting with a backslash as well a
 | \e | use your $EDITOR to write a long query |
 | \timing | toggle display of query execution times |
 
+## Securing Postgres
+
+This is by no means a comprehensive guide, and it's probably going to grow over time.
+
+### pg\_hba.conf
+
+Using the `/etc/postgresql/[version]/[database]/pg_hba.conf` config file you can easily control which client can log in and to which database, as explained in the [documentation](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html). Most common authentication methods:
+
+* `trust` - use in local development only, unconditionally allows all roles to connect
+* `reject` - deny all access from the given IPs or for given user
+* `scram-sha-256` - send a hashed password \(use this instead of the old `md5` method for password-based authentication
+* `peer` - for **local** connections, use current user's username  
+
 ## Copy to/from CSV
 
 If you ever need to share some data, you can easily export a request to CSV straight into a file:
