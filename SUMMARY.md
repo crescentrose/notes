@@ -21,6 +21,7 @@
 
 ## System Administration
 
+* [New server setup](system-administration/new-server-setup.md)
 * [systemd](system-administration/systemd.md)
 * [launchd](system-administration/launchd.md)
 
