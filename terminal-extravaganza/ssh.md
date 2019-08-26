@@ -18,5 +18,16 @@ sudo ufw allow mosh
 sudo ufw reload
 ```
 
-You should then be able to connect via mosh from the device of your choice. 
+You should then be able to connect via mosh from the device of your choice.
+
+## Force password authentication
+
+There might be an occasional situation in which you might want to authenticate using a password instead of connecting using your public key. Note that this will fail if the server has password authentication disabled.
+
+```bash
+# password only
+ssh -o PreferredAuthentications=password user@127.0.0.1
+# fallback to pubkey if server has password auth disabled
+ssh -o PreferredAuthentications=password,publickey user@127.0.0.1
+```
 

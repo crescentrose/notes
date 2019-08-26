@@ -56,7 +56,7 @@ You should use [a global gitignore](git.md#global-gitignore) file to hide the `t
 
 ## .vimrc
 
-The vimrc file is the preferences menu of Vim, except it's actually code that Vim executes on startup using its own language \(vimscript\). Commonly shared between nerds as a validation for spending too much time on _ricing_. Your vimrc should be your own and your own alone, and you should not blindly copy someone else's, but damn if it's not fun to scroll through other people's vimrcs. In the interest of full disclosure, [here's mine](https://github.com/crescentrose/dotfiles/blob/master/vimrc).
+The vimrc file is the preferences menu of Vim, except it's actually code that Vim executes on startup using its own language \(vimscript\). Commonly shared between nerds as a validation for spending too much time on [_ricing_](https://www.reddit.com/r/unixporn/comments/3iy3wd/stupid_question_what_is_ricing/). Your vimrc should be your own and your own alone, and you should not blindly copy someone else's, but damn if it's not fun to scroll through other people's vimrcs. In the interest of full disclosure, [here's mine](https://github.com/crescentrose/dotfiles/blob/master/vimrc).
 
 ### vimrc hacks
 
