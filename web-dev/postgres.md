@@ -45,6 +45,12 @@ Using the `/etc/postgresql/[version]/[database]/pg_hba.conf` config file you can
 * `scram-sha-256` - send a hashed password \(use this instead of the old `md5` method for password-based authentication
 * `peer` - for **local** connections, use current user's username  
 
+## Copy a database from one machine to another
+
+1. Create a database dump on the source machine using the `-O` switch to disable outputting ownership data: `psql -U postgres -O <databasename> > dump.sql`
+2. Create a new role and a new database on the target system: `psql -c "CREATE ROLE <username> WITH LOGIN; psql -c "CREATE DATABASE <databasename> WITH OWNER <username> ENCODING = 'UNICODE';`  
+3. Import the data: `psql -U <username> -d <databasename> -f dump.sql`
+
 ## Copy to/from CSV
 
 If you ever need to share some data, you can easily export a request to CSV straight into a file:
