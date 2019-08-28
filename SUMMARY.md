@@ -6,6 +6,7 @@
 ## Terminal Extravaganza
 
 * [kitty](terminal-extravaganza/kitty-terminal.md)
+* [zsh](terminal-extravaganza/zsh.md)
 * [vim](terminal-extravaganza/vim.md)
 * [git](terminal-extravaganza/git.md)
 * [ssh](terminal-extravaganza/ssh.md)
