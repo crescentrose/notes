@@ -59,3 +59,22 @@ PasswordAuthentication no
 
 For additional security, you may disable root login completely \(`passwd -l root`\).
 
+### Set up UFW
+
+UFW is a simple iptables interface that manages rules in a very straightforward manner.
+
+```bash
+sudo ufw status
+# => disabled by default
+sudo ufw allow ssh
+# => use service names
+sudo ufw allow 80
+# => use port numbers
+sudo ufw default deny
+# => all incoming connections not explicitly allowed will be dropped
+sudo ufw enable
+# => load the rules and enable them to be added on boot
+sudo ufw reload
+# => when changing rules
+```
+
