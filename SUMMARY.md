@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Index](README.md)
-* [Raspberry Pi](raspberry-pi.md)
+* [Assorted articles, tools and links](assorted-articles-and-links/README.md)
+  * [Raspberry Pi](assorted-articles-and-links/raspberry-pi.md)
 
 ## Terminal Extravaganza
 
