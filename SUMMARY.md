@@ -29,6 +29,7 @@
 
 ## DevOps
 
+* [Ansible](devops/ansible.md)
 * [Packer](devops/packer.md)
 * [Docker](devops/docker.md)
 * [Terraform](devops/terraform.md)
