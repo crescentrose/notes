@@ -30,27 +30,27 @@ tags*
 
 If you share your dotfiles on the World Wide Web, or you just keep them in a git repo as a backup, you should probably not include your name, email and other things in your main git config, just so that others who might want to use it don't accidentally commit as you. Thankfully, Git lets us include configs into one another using the `include` directive:
 
-{% code-tabs %}
-{% code-tabs-item title=".gitconfig" %}
+{% tabs %}
+{% tab title=".gitconfig" %}
 ```text
 [include]
     path = ~/.gitconfig.local
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Now you can add `.gitconfig.local` to your `.gitignore` in your dotfiles repository and publish the rest of the thing, while adding private config to the local one:
 
-{% code-tabs %}
-{% code-tabs-item title=".gitconfig.local" %}
+{% tabs %}
+{% tab title=".gitconfig.local" %}
 ```text
 [user]
 	name = Ivan Oštrić
 	email = ivan@halcyon.hr
 	signingkey = 314838F5043A5EFF
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 
 

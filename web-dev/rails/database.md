@@ -12,8 +12,8 @@ Obviously, this locks you into using the RDBMS of your choice. But since you are
 
 To alleviate that, you can lock yourself into the current database engine and dump out `structure.sql` which is a database-specific set of SQL instructions. Just add this to your `config/application.rb`:
 
-{% code-tabs %}
-{% code-tabs-item title="config/application.rb" %}
+{% tabs %}
+{% tab title="config/application.rb" %}
 ```ruby
 module YourRailsApplication
   class Application < Rails::Application
@@ -22,8 +22,8 @@ module YourRailsApplication
   end
 end
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Voila! Next time you run your migrations, your `schema.rb` will be replaced with a nifty `structure.sql`.
 

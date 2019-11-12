@@ -27,8 +27,9 @@
 * [systemd](system-administration/systemd.md)
 * [launchd](system-administration/launchd.md)
 
-## Operations
+## DevOps
 
-* [Packer](operations/packer.md)
-* [Docker](operations/docker.md)
+* [Packer](devops/packer.md)
+* [Docker](devops/docker.md)
+* [Terraform](devops/terraform.md)
 

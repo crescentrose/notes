@@ -20,16 +20,16 @@ Rough notes for the kind of people who've done this kind of thing before.
 4. Start the SSH server \(you didn't see that coming, did ya?\). Using `sudo systemctl start ssh` followed by `sudo systemctl enable ssh` will do.
 5. Before you unplug your Pi from your makeshift setup, you will probably want to ensure a static IP address so you can connect to it. Edit the `/etc/dhcpcd.conf` file and uncomment the example static IP configuration block, making changes as necessary.
 
-{% code-tabs %}
-{% code-tabs-item title="/etc/dhcpcd.conf" %}
+{% tabs %}
+{% tab title="/etc/dhcpcd.conf" %}
 ```text
 interface eth0
 static ip_address=192.168.5.20/24
 static routers=192.168.5.1
 static domain_name_servers=192.168.5.1 1.1.1.1 1.0.0.1
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Save and shut down your Pi, and move it in your desired location. I like to keep mine slightly out of sight.
 
@@ -119,8 +119,8 @@ Installation is simple by using Docker, a `docker-compose.yml` example is provid
 
 You'll probably want to put something like nginx in front of the web server so you can control who can access to the web interface \(as by default some things are public.\) If you change the default web interface port, you will also need to set an env variable that points to the new URL as by default the app expects to be running on port 80:
 
-{% code-tabs %}
-{% code-tabs-item title="docker-compose.yml" %}
+{% tabs %}
+{% tab title="docker-compose.yml" %}
 ```yaml
 services:
     pihole:
@@ -130,8 +130,8 @@ services:
         environment:
             VIRTUAL_HOST: 'your.pihole.host:8001'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## strongSwan \(VPN\)
 
