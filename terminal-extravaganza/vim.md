@@ -32,8 +32,7 @@ To be fair, if you want to have your Vim install take 20 seconds to boot up and 
 
 Vim understands the [ctags](https://ctags.io) format, which is basically an index of keywords in your program. For example, if you have this snippet of Ruby code:
 
-{% tabs %}
-{% tab title="sample.rb" %}
+{% code title="sample.rb" %}
 ```ruby
 class Hello
   def say_hi
@@ -45,8 +44,7 @@ hello = Hello.new
 hello.say_hi
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 After you run the `ctags` \(or, for Ruby, [ripper-tags](https://github.com/tmm1/ripper-tags)\) program to generate the index, Vim will pick up on the resulting `tags` file and let you navigate to definitions of the `Hello` class and the `say_hi` method \(default shortcut: `⌃]`\), which is especially useful if your project spans hundreds of files. You can even introspect gem sources like that. Other useful things include searching for tags and autocompletion.
 
@@ -62,8 +60,7 @@ The vimrc file is the preferences menu of Vim, except it's actually code that Vi
 
 Assorted collection of cool tidbits you might and might not need.
 
-{% tabs %}
-{% tab title=".vimrc" %}
+{% code title=".vimrc" %}
 ```text
 " Use full line to separate windows
 set fillchars+=vert:│
@@ -83,8 +80,7 @@ function! LightlineFilename()
   return expand('%')
 endfunction
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 
 

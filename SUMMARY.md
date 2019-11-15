@@ -20,6 +20,7 @@
   * [Active Storage](web-dev/rails/active-storage.md)
   * [Testing](web-dev/rails/testing.md)
 * [Postgres](web-dev/postgres.md)
+* [Mongo](web-dev/mongo.md)
 
 ## System Administration
 

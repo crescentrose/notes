@@ -14,8 +14,7 @@ ruby -r json -r yaml -e 'puts(YAML.load($stdin).to_json)'
 
 You can use a rudimentary {M,R}akefile, a Bash script or another task runner of your choice to simplify this.
 
-{% tabs %}
-{% tab title="yacker.sh" %}
+{% code title="yacker.sh" %}
 ```bash
 #!/bin/sh
 
@@ -30,8 +29,7 @@ CONVERTER="ruby -r json -r yaml -e 'puts(YAML.load(\$stdin).to_json)'"
 
 eval "cat $YAML_FILE | $CONVERTER | packer $PACKER_PARAMS -"
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 This lets you write pretty YAML and convert it to ugly JSON on the fly. This also means that from here on \(at least until HSL2 support is released\) the examples in this article will be in YAML, not JSON, as it is much easier to write.
 
